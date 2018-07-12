@@ -1,0 +1,84 @@
+html {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar {
+  background-color: #4a4a4a96;
+  /* #4a4a4a;*/
+}
+
+.navbar-item img {
+  max-height: 3rem;
+}
+
+.navbar-link::after {
+  border-color: #3273dc12;
+  margin-top: -.375em;
+  right: 1.125em;
+}
+
+.navbar-link::after, .select:not(.is-multiple):not(.is-loading)::after {
+  border: 0px;
+}
+
+.navbar-item, .navbar-link {
+  color: #fffafa;
+}
+
+.navbar-dropdown {
+  /*  background-color: #4a4a4a; */
+  background-color: #e7ffeb36;
+}
+
+.title {
+  color: #efe8e8;
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 1.125;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.input, .textarea {
+  max-width: 40%;
+}
+
+.input-inline {
+  display: inline-block;
+}
+
+div.field-body {
+  margin-top: 3rem;
+}
+
+input.input.is-rounded {
+  border-radius: 290486px;
+}
+
+.field.has-addons {
+  display: flex;
+  justify-content: flex-start
+}
+
+.field.has-addons .control:not(:last-child) {
+  margin-right: -1px
+}
+
+.field.has-addons .control:last-child .button, .field.has-addons .control:last-child .input, .field.has-addons .control:last-child .select select {
+  border-bottom-left-radius: 290486px;
+  border-top-left-radius: 290486px
+}
+
+.footer {
+  background-color: #fafafa00; 
+ }
