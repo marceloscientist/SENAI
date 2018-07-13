@@ -4,13 +4,14 @@
 
 <div class="container">
     <div class="py-5 text-center">
-        <h1>Editá Pessoas</h1>
+        <h1 class="text-success">Criá • Editá</h1>
         <form method="post">
             <div class="form-group">
                 {% csrf_token %}
                 {{ form.as_p }}
             </div>
-            <button type="submit" class="btn btn-primary">Criar/Editar</button>
+            <a href="#" type="submit" class="btn btn-primary btn-large"><b>Criá . Editá</b></a>
         </form>
     </div>
 </div>
+
