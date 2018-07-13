@@ -1,6 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'people/bootstrap.min.css' %}">
+
+<div class="container">
+
 <h1>Detalhes Pessoais</h1>
 <h2>Name: {{object.name}}</h2>
 <h2>Idade: {{ object.idade }}</h2>
 </h2>CPF: {{ object.cpf }}</h2>
 </h2>email: {{ object.email }}</h2>
 
+</div>

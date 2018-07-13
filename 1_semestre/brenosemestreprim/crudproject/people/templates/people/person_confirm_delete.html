@@ -1,5 +1,12 @@
+{% load static %}
+
+<div class="container">
+
+<link rel="stylesheet" href="{% static 'people/bootstrap.min.css' %}">
+
 <h1>Deléte Pessoa </h1>
 <form method="post">{% csrf_token %}
     Certo que qué deletá "{{ object }}" ?
     <input type="submit" value="Submit" />
 </form>
+</div>
