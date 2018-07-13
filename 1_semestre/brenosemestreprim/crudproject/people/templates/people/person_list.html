@@ -3,35 +3,42 @@
 <link rel="stylesheet" href="{% static 'people/bootstrap.min.css' %}">
 
 <div class="container">
+    <div class="py-5 text-center">
+        <h1>Lista de Pessoas</h1>
 
-<h1>Lista de Pessoas</h1>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Visú</th>
+                    <th scope="col">Editá</th>
+                    <th scope="col">Deléte</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for person in object_list %}
+                <tr>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.idade }}</td>
+                    <td>{{ person.cpf }}</td>
+                    <td>{{ person.email }}</td>
+                    <td>
+                        <a href="{% url "person_view" person.id %}">visú</a>
+                    </td>
+                    <td>
+                        <a href="{% url "person_edit" person.id %}">editá</a>
+                    </td>
+                    <td>
+                        <a href="{% url "person_delete" person.id %}">deléte</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
-<table border="1">
-<thead>
-    <tr>
-    <th>Nome</th>
-    <th>Idade</th>
-    <th>CPF</th>
-    <th>Email</th>
-    <th>Visú</th>
-    <th>Editá</th>
-    <th>Deléte</th>
-    </tr>
-</thead>
-<tbody>
-    {% for person in object_list %}
-    <tr>
-    <td>{{ person.name }}</td>
-    <td>{{ person.idade }}</td>
-    <td>{{ person.cpf }}</td>
-    <td>{{ person.email }}</td>
-    <td><a href="{% url "person_view" person.id %}">visú</a></td>
-    <td><a href="{% url "person_edit" person.id %}">editá</a></td>
-    <td><a href="{% url "person_delete" person.id %}">deléte</a></td>
-    </tr>
-    {% endfor %}
-</tbody>
-</table>
-
-<a href="{% url "person_new" %}">Novo</a>
+        <a href="{% url "person_new" %}">Novo</a>
+    </div>
 </div>

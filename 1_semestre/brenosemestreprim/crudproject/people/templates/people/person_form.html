@@ -3,10 +3,14 @@
 <link rel="stylesheet" href="{% static 'people/bootstrap.min.css' %}">
 
 <div class="container">
-
-<h1>Editá Pessoas</h1>
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" />
-</form>
+    <div class="py-5 text-center">
+        <h1>Editá Pessoas</h1>
+        <form method="post">
+            <div class="form-group">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-primary">Criar/Editar</button>
+        </form>
+    </div>
 </div>

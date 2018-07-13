@@ -1,12 +1,21 @@
 {% load static %}
+<link rel="stylesheet" href="{% static 'people/bootstrap.min.css' %}">
+<title>Deléte Pessoa </title>
 
 <div class="container">
+    <div class="py-5 text-center">
+    </div>
+</div>
+<!-- gap -->
 
-<link rel="stylesheet" href="{% static 'people/bootstrap.min.css' %}">
-
-<h1>Deléte Pessoa </h1>
-<form method="post">{% csrf_token %}
-    Certo que qué deletá "{{ object }}" ?
-    <input type="submit" value="Submit" />
-</form>
+<div class="jumbotron bg-danger text-white">
+    <div class="py-5 text-center ">
+        <h1 class="display-4 text-center">{% csrf_token %} BORA DELETÁ MIESMU "{{ object }}"?</h1>
+        <p class="lead">
+            <br>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-outline-primary btn-large text-white">CONFIRMAR</button>
+        </p>
+    </div>
 </div>
