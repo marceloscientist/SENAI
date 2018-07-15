@@ -9,9 +9,13 @@
             <div class="form-group">
                 {% csrf_token %}
                 {{ form.as_p }}
-            </div>
-            <a href="#" type="submit" class="btn btn-primary btn-large"><b>Criá . Editá</b></a>
+                <input type="submit" class="btn btn-primary btn-large" value="Criá . Editá" />
         </form>
     </div>
 </div>
 
+<!-- <h1>Book Edit</h1>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form> -->
